@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  height: 100%;
+}
+
+.main {
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+}
