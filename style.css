@@ -1,10 +1,77 @@
 * {
+  /* Select font */
   margin: 0;
-  height: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.hero {
+  background-color: aqua;
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  height: auto;
+  width: 100%;
+  /* Make transparent after adding stars and the solar system */
+  background-color: transparent; 
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-left: 15%;
+  color: white;
+}
+
+.sectionLinks {
+  font-size: 2rem;
+  margin-right: 15%;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
 
 .main {
-  background-color: aqua;
+  background-color: black;
   height: 100%;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.projects {
+  background-color: gray;
+  height: auto;
+  width: 100%;
+}
+
+.skills {
+  background-color: greenyellow;
+  height: auto;
+  width: 100%;
+}
+
+.education {
+  background-color: red;
+  height: auto;
+  width: 100%;
+}
+
+.contact {
+  background-color: black;
+  height: auto;
   width: 100%;
 }
