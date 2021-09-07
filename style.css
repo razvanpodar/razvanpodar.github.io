@@ -8,7 +8,7 @@ body {
 }
 
 .hero {
-  background-color: aqua;
+  background-color: gray;
   height: 100vh;
   width: 100%;
 }
@@ -17,9 +17,12 @@ body {
   position: absolute;
   display: flex;
   justify-content: space-between;
+  align-self: center;
   margin-top: 0;
   height: auto;
-  width: 100%;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
   /* Make transparent after adding stars and the solar system */
   background-color: transparent; 
   padding-top: 0.25rem;
@@ -28,28 +31,36 @@ body {
 
 .logo {
   font-size: 2rem;
-  margin-left: 15%;
   color: white;
 }
 
 .sectionLinks {
+  display: inline;
+  width: 70%;
   font-size: 2rem;
-  margin-right: 15%;
+  text-align: right;
 }
 
 .link {
+  /* margin-right: 5%; */
+  margin-left: 5%;
   text-decoration: none;
   color: white;
 }
 
-.main {
-  background-color: black;
-  height: 100%;
+.space {
+  height: 100vh;
   width: 100%;
+}
+
+.main {
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .title {
   text-align: center;
+  padding: 0.5rem;
 }
 
 .projects {
@@ -59,19 +70,46 @@ body {
 }
 
 .skills {
-  background-color: greenyellow;
+  background-color: white;
   height: auto;
   width: 100%;
 }
 
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+}
+
+.skill {
+  display: inline-block;
+  vertical-align: middle;
+  flex-grow: 1;
+  width: 15%;
+
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
+  background-color: #11b6d4;
+  color: black;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
 .education {
-  background-color: red;
+  background-color: gray;
   height: auto;
   width: 100%;
 }
 
 .contact {
-  background-color: black;
+  background-color: white;
   height: auto;
   width: 100%;
 }
