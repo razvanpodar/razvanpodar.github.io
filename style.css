@@ -3,14 +3,24 @@
 	margin: 0;
 }
 
+/* TODO: three js code redo, so it doesn't 
+mess with the canvas size creating overflow */
+
 body {
 	background-color: #ffffff;
 }
 
 .hero {
+	margin: 0;
 	background-color: #000000;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
+}
+
+.scene {
+	height: 100%;
+	width: 100%;
+	background-color: black;
 }
 
 .navbar {
@@ -23,34 +33,28 @@ body {
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
-	/* Make transparent after adding stars and the solar system */
 	background-color: transparent; 
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
+	z-index: 99;
 }
 
 .logo {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: white;
 }
 
 .section-links {
 	display: inline;
 	width: 70%;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	text-align: right;
 }
 
 .link {
-	/* margin-right: 5%; */
 	margin-left: 5%;
 	text-decoration: none;
 	color: white;
-}
-
-.space {
-	height: 100vh;
-	width: 100%;
 }
 
 .main {
@@ -69,7 +73,6 @@ body {
 	height: auto;
 	width: 100%;
 	border-radius: 0 0 1rem 1rem;
-	padding: 0 1rem 1rem 1rem;
 }
 
 .projects-container {
@@ -141,10 +144,14 @@ body {
 
 .university {
 	padding: 0 1rem 1rem 2rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
 .high-school {
 	padding: 0 1rem 2rem 2rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
 .contact {
