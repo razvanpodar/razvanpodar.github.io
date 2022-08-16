@@ -1,3 +1,4 @@
+import './style.css'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
@@ -12,16 +13,10 @@ const renderer = new THREE.WebGLRenderer({
 	antialias: true,
 })
 
-// const clearColor = new THREE.Color(0x3d4154)
-// const clearColor = new THREE.Color(0x42414f)
-// const clearColor = new THREE.Color(0x47464a)
 const clearColor = new THREE.Color(0x2c2a30)
 renderer.setClearColor(clearColor)
 
-// const pixelRatio = window.innerWidth / window.innerHeight
-// console.log("Pixel ratio: " + pixelRatio)
 renderer.setPixelRatio(window.devicePixelRatio)
-// renderer.setPixelRatio(pixelRatio)
 renderer.setSize(window.innerWidth, window.innerHeight)
 
 const DEVIATION = 10
@@ -33,7 +28,6 @@ const X_STEP = 4
 const X_HIGH = (X_STEP * NR_PLANETS) - X_STEP
 
 const nrStars = 300
-// const starColor = new THREE.Color(0xc2c1b8)
 const starColor = new THREE.Color(0xfffef5)
 var stars = []
 var starsOffsetX = []
@@ -49,7 +43,6 @@ function generateStars()
 
     for (let i = 0; i < nrStars; i++)
     {
-        // Math.floor(Math.random() * (max - min) ) + min;
         let x = (Math.random() * (endWitdh - startWidth)) + startWidth;    
         let y = (Math.random() * (endHeight - startHeight)) + startHeight;    
         
@@ -57,13 +50,7 @@ function generateStars()
         // So scale is used to create the illusion of depth 
         let scale = Math.random() * (endScale - startScale) + startScale;    
         console.log(scale)
-        // let star = new THREE.Vector3(x, y, z);
 
-        // const light = new THREE.PointLight(0xff0000, 1, 100);
-        // light.position.set(x, y, 10)
-        // scene.add(light)
-        // var sphere = new THREE.SphereGeometry(scale, 32, 32)
-        // var starGeometry = new THREE.SphereGeometry(scale, 32, 32)
         var starGeometry = new THREE.OctahedronGeometry(scale)
         var material = new THREE.MeshBasicMaterial( {color: starColor});
         var star = new THREE.Mesh(starGeometry, material)
@@ -137,20 +124,12 @@ loader.load('models/uranus.glb', (gltf) => {
 
 window.addEventListener('resize', (event) =>
 {
-    // Update camera
-    // camera.left = window.innerWidth / -100
-    // camera.right = window.innerWidth / 100
-    // camera.top = window.innerHeight / 100
-    // camera.top = window.innerHeight / -100
-
     // Update renderer
     renderer.setSize(window.innerWidth, window.innerHeight)
 
     var pixelRatioResize = window.innerWidth / window.innerHeight
     renderer.setPixelRatio(pixelRatioResize)
-    // renderer.setPixelRatio(window.devicePixelRatio)
     camera.updateProjectionMatrix()
-    console.log("Pixel ratio: " + pixelRatioResize)
 })
 
 var scroll_amount = 0
