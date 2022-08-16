@@ -3,16 +3,155 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Razvan-Alin Podar</title>
+        <link rel="stylesheet" href="/style.css">
+        <title>Răzvan-Alin Podar</title>
     </head>
     <body>
 	    <canvas class="scene"></canvas>
 
-        <section>
-            <h1>Razvan-Alin Podar</h1>
+        <section id="intro">
+            <div class="intro-container">
+                <h1>Răzvan-Alin Podar</h1>
+                <h3>Software engineer</h3>
+            </div>
         </section>
 
-        <script type="module" src="main.js"></script>
+        <section id="projects">
+            <div class="projects-container">
+                <h1>Projects</h1>
+                <div class="projects-lot">
+                    <button id="prev" class="project-button">
+                        <img src="prev.svg" width="35px" height="30px"/>
+                    </button>
+                    <button id="next" class="project-button">
+                        <img src="next.svg" width="35px" height="30px"/>
+                    </button>
+                    <div class="project-card">
+                        <h3>Autocheck</h3>
+                        <h4><i>Languages: Python</i></h4>
+                        <h4>
+                            <i>Libraries: Mediapipe (face detection module)</i>
+                        </h4>
+                        <br>
+                        <p class="project-line">
+                            Monitoring application that tracks the amount 
+                            of time a person spends in front of the 
+                            computer and the number of blinks per minute 
+                            using the webcam.
+                        </p> 
+                        <p class="project-line">
+                            Used Mediapipe to detect faces and the eyes 
+                            for each face.
+                        </p>
+                        <p class="project-line">
+                            Implemented and trained a Convolutional Neural 
+                            Network to clasify if and eye is opened or 
+                            closed.
+                        </p>
+                        <p class="project-line">
+                            Used the eye opened/closed state to determine 
+                            blinking patterns.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>AptCAD</h3>
+                        <h4><i>Languages: C++</i></h4>
+                        <h4><i>Libraries: GLEW (OpenGL), GLFW, OpenCV</i></h4>
+                        <br>
+                        <p class="project-line">
+                            Computer-Aided Design software that generates 
+                            3D models (objects) from 2D schematics.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Animocap</h3>
+                        <h4><i>Languages: C++</i></h4>
+                        <h4><i>Libraries: GLEW (OpenGL), GLFW, Assimp</i></h4>
+                        <br>
+                        <p class="project-line">
+                            3D skeletal animation software.
+                        </p>
+                    </div>
+                    <div class="project-card">
+                        <h3>QRCode</h3>
+                        <h4><i>Languages: C++</i></h4>
+                        <h4><i>Libraries: GLEW (OpenGL), GLFW, OpenCV</i></h4>
+                        <br>
+                        <p class="project-line">
+                            Application that can generate and/or scan a 
+                            QR Code.
+                        </p>
+                        <a href="https://github.com/razvanpodar/qr-code">
+                            Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill"><span>HTML</span></div>
+                <div class="skill"><span>CSS</span></div>
+                <div class="skill"><span>JavaScript</span></div>
+                <div class="skill"><span>ReactJS</span></div>
+                <div class="skill"><span>Python</span></div>
+                <div class="skill"><span>C/C++</span></div>
+                <div class="skill"><span>Tensorflow</span></div>
+                <div class="skill"><span>Keras</span></div>
+                <div class="skill"><span>OpenCV</span></div>
+                <div class="skill"><span>OpenGL</span></div>
+                <div class="skill"><span>Linux</span></div>
+                <div class="skill"><span>Bash</span></div>
+                <div class="skill"><span>Git</span></div>
+                <div class="skill"><span>Algorithms</span></div>
+                <div class="skill"><span>Data structures</span></div>
+                <div class="skill"><span>OOP</span></div>
+                <div class="skill"><span>Image processing</span></div>
+                <div class="skill"><span>Machine learning</span></div>
+                <div class="skill"><span>Graphical processing</span></div>
+                <div class="skill"><span>Agile methodology</span></div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h1>Education</h1>
+            <div class="education-container">
+                <div class="education-university">
+                    <h3>Technical University of Cluj-Napoca</h3>
+                    <h4><i>Computer Science</i></h4>
+                </div>
+                <div class="education-highschool">
+                    <h3>
+                        Theoretical High School "Pavel Dan", Campia Turzii
+                    </h3>
+                    <h4><i>Mathematics - Informatics</i></h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="contact-container">
+                <div class="contact-email">
+                    <img src="mail.svg" alt="mail" width="25px" height="25px"/>
+                    <span class="email">razvan_podar@yahoo.com</span>
+                </div>
+                <div class="contact-linkedin">
+                    <img src="linkedin.svg" alt="linkedin" width="25px" height="25px"/>
+                    <a class="linkedin-link" href="https://www.linkedin.com/in/răzvan-podar/">
+                        Răzvan Podar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="tutorial"> 
+            <h3>Scroll (or use Left/Right arrow keys) to navigate</h3>
+        </div>
+
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="/projects-carousel.js"></script>
     </body>
 </html>
